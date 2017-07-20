@@ -1,0 +1,62 @@
+{
+  "name": "@rill/boilerplate-webpack-marko",
+  "description": "An isomorphic boilerplate using marko, webpack and rill.",
+  "version": "0.0.1",
+  "author": "Dylan Piercey <pierceydylan@gmail.com>",
+  "browser": {
+    "./api/index.js": false
+  },
+  "dependencies": {
+    "@rill/body": "^1.2.2",
+    "@rill/compress": "^1.0.4",
+    "@rill/etag": "^1.1.1",
+    "@rill/expose": "^1.0.0",
+    "@rill/fresh": "^1.0.0",
+    "@rill/helmet": "^1.1.0",
+    "@rill/logger": "^2.1.1",
+    "@rill/marko": "^0.1.0",
+    "@rill/page": "^2.0.0",
+    "@rill/polyfill": "^1.1.4",
+    "@rill/progress": "^2.0.3",
+    "@rill/static": "^2.0.0",
+    "auto-sni": "^2.2.1",
+    "babel-runtime": "^6.23.0",
+    "ms": "^2.0.0",
+    "rill": "^5.0.3",
+    "source-map-support": "^0.4.15"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babili-webpack-plugin": "^0.1.1",
+    "compression-webpack-plugin": "^0.4.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "husky": "^0.14.3",
+    "imagemin-webpack-plugin": "^1.4.4",
+    "marko": "^4.4.18",
+    "marko-loader": "^1.3.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.6",
+    "pretty-error": "^2.1.0",
+    "spawn-server-webpack-plugin": "^1.7.1",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "main": "bould/index.js",
+  "private": true,
+  "scripts": {
+    "build": "webpack --progress --config ./config/prod/webpack.config.js",
+    "precommit": "npm run build && git add ./build --all",
+    "start": "node ./server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node ./config/dev/dev-server.js"
+  }
+}
