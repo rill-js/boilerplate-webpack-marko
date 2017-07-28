@@ -1,8 +1,25 @@
 import logoImg from '../assets/logo.jpg'
 
+class {
+  onCreate () {
+    this.state = { count: 0 }
+  }
+
+  increment () {
+    this.state.count++
+  }
+}
+
 <div>
   <img src=(logoImg) />
   <input type="text">
   <a href="/?reload">Reload</a>
   <a href='/other'>Go to the other page</a>
+
+  <div.count>
+      ${state.count}
+  </div>
+  <button.example-button on-click('increment')>
+    Click me!
+  </button>
 </div>
