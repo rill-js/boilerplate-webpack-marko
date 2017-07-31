@@ -14,7 +14,7 @@
     "@rill/fresh": "^1.0.0",
     "@rill/helmet": "^1.2.0",
     "@rill/logger": "^2.1.1",
-    "@rill/marko": "^0.1.0",
+    "@rill/marko": "^0.2.0",
     "@rill/page": "^2.0.1",
     "@rill/polyfill": "^1.1.5",
     "@rill/progress": "^2.0.4",
@@ -22,7 +22,7 @@
     "auto-sni": "^2.3.1",
     "babel-runtime": "^6.25.0",
     "ms": "^2.0.0",
-    "rill": "^5.0.8",
+    "rill": "^5.0.12",
     "source-map-support": "^0.4.15"
   },
   "devDependencies": {
@@ -44,7 +44,7 @@
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
     "pretty-error": "^2.1.0",
-    "spawn-server-webpack-plugin": "^1.9.0",
+    "spawn-server-webpack-plugin": "^2.0.1",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   },

@@ -13,6 +13,8 @@ import body from '@rill/body'
 import apiCtrls from '../api'
 import appCtrls from './controllers'
 import views from './views'
+const message = '  App Started'
+console.time(message)
 
 export default router()
   .use(helmet(global.SECURITY))
@@ -28,4 +30,7 @@ export default router()
   .at('/api/*', !process.browser && apiCtrls)
   .at('/app/*', appCtrls)
   .get(views)
-  .listen({ port: 8081 })
+  .listen(() => {
+    console.timeEnd(message)
+    console.log('')
+  })

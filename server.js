@@ -34,8 +34,8 @@ global.SECURITY = {
 }
 
 // Start secure server.
-const server = require('./build').default
-require('auto-sni')({
+const app = require('./build').default
+const server = require('auto-sni')({
   agreeTos: true,
   email: 'user@email.com', // CHANGE ME
   domains: ['domain.com'], // CHANGE ME
@@ -43,4 +43,8 @@ require('auto-sni')({
     http: process.env.HTTP_PORT,
     https: process.env.HTTPS_PORT
   }
-}, server.emit.bind(server, 'request'))
+}, app.emit.bind(app, 'request'))
+
+server.once('listening', () => {
+  console.log(`Production Server running on port ${server.address().port}`)
+})
