@@ -15,7 +15,7 @@
     "@rill/helmet": "^1.2.0",
     "@rill/logger": "^2.1.1",
     "@rill/marko": "^0.2.0",
-    "@rill/page": "^2.0.1",
+    "@rill/page": "^2.1.0",
     "@rill/polyfill": "^1.1.5",
     "@rill/progress": "^2.0.4",
     "@rill/static": "^2.0.0",
@@ -44,7 +44,7 @@
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
     "pretty-error": "^2.1.0",
-    "spawn-server-webpack-plugin": "^2.0.3",
+    "spawn-server-webpack-plugin": "^2.0.5",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   },
