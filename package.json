@@ -7,13 +7,13 @@
     "./api/index.js": false
   },
   "dependencies": {
-    "@rill/body": "^1.2.2",
-    "@rill/compress": "^1.0.4",
+    "@rill/body": "^1.2.3",
+    "@rill/compress": "^1.0.5",
     "@rill/etag": "^1.1.1",
     "@rill/expose": "^1.0.0",
-    "@rill/fresh": "^1.0.0",
+    "@rill/fresh": "^1.0.1",
     "@rill/helmet": "^1.2.0",
-    "@rill/logger": "^2.1.1",
+    "@rill/logger": "^2.1.2",
     "@rill/marko": "^0.2.0",
     "@rill/page": "^2.1.0",
     "@rill/polyfill": "^1.1.5",
@@ -45,8 +45,8 @@
     "postcss-loader": "^2.0.6",
     "pretty-error": "^2.1.0",
     "spawn-server-webpack-plugin": "^2.0.5",
-    "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1"
+    "webpack": "^3.5.2",
+    "webpack-dev-server": "^2.7.1"
   },
   "keywords": [],
   "license": "MIT",
