@@ -24,6 +24,7 @@ const createConfig = opts => Object.assign(opts, {
       exclude: /node_modules/,
       options: {
         babelrc: false,
+        plugins: [['babel-plugin-transform-runtime', { 'polyfill': false }]],
         presets: [
           ['babel-preset-env', {
             useBuiltIns: true,

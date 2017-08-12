@@ -29,7 +29,7 @@ const createConfig = opts => Object.assign(opts, {
       options: {
         babelrc: false,
         cacheDirectory: true,
-        plugins: ['babel-plugin-transform-runtime'],
+        plugins: [['babel-plugin-transform-runtime', { 'polyfill': false }]],
         presets: [
           ['babel-preset-env', {
             useBuiltIns: true,
