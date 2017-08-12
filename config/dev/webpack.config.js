@@ -3,6 +3,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const ExtractCSSPlugin = require('extract-text-webpack-plugin')
+const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin')
 const SpawnServerPlugin = require('spawn-server-webpack-plugin')
 
 const ROOT_PATH = path.join(__dirname, '../..')
@@ -93,7 +94,8 @@ module.exports = exports = [
         'process.browser': undefined
       }),
       new webpack.BannerPlugin({ banner: 'require("source-map-support").install({ hookRequire: true })', raw: true }),
-      new ExtractCSSPlugin({ disable: true, allChunks: true }),
+      new ExtractCSSPlugin({ filename: 'index.css', allChunks: true }),
+      new IgnoreEmitPlugin('index.css'),
       spawnedServer
     ]
   }),

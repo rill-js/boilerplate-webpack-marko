@@ -3,6 +3,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const ExtractCSSPlugin = require('extract-text-webpack-plugin')
+const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin')
 const MinifyJSPlugin = require('babili-webpack-plugin')
 const MinifyImgPlugin = require('imagemin-webpack-plugin').default
 const CompressionPlugin = require('compression-webpack-plugin')
@@ -23,7 +24,6 @@ const createConfig = opts => Object.assign(opts, {
       exclude: /node_modules/,
       options: {
         babelrc: false,
-        plugins: ['babel-plugin-transform-runtime'],
         presets: [
           ['babel-preset-env', {
             useBuiltIns: true,
@@ -90,7 +90,8 @@ module.exports = [
         'process.browser': undefined
       }),
       new webpack.BannerPlugin({ banner: 'require("source-map-support").install({ hookRequire: true })', raw: true }),
-      new ExtractCSSPlugin({ disable: true, allChunks: true })
+      new ExtractCSSPlugin({ filename: 'index.css', allChunks: true }),
+      new IgnoreEmitPlugin('index.css')
     ]
   }),
   createConfig({
