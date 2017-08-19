@@ -56,7 +56,7 @@ const createConfig = opts => Object.assign(opts, {
       }] })
     }, {
       test: /\.marko$/,
-      exclude: /node_modules/,
+      exclude: /node_modules(?!\/marko)/,
       loader: 'marko-loader',
       options: { target: opts.name.toLowerCase() }
     }, {
