@@ -11,15 +11,19 @@ class {
 }
 
 <div>
-  <img src=(logoImg) />
-  <input type="text">
-  <a href="/?reload">Reload</a>
-  <a href='/other'>Go to the other page</a>
-
-  <div.count>
-      ${state.count}
-  </div>
-  <button.example-button on-click('increment')>
-    Click me!
-  </button>
+  <app-page>
+    <img src=(logoImg) />
+    <input type="text">
+    <a href="/?time=${new Date()}">Reload</a>
+    <a href='/other'>Go to the other page</a>
+    <div.time>
+      ${out.global.query.time}
+    </div>
+    <div.count>
+        ${state.count}
+    </div>
+    <button.example-button on-click('increment')>
+      Click me!
+    </button>
+  </app-page>
 </div>
